@@ -13,7 +13,7 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     Random random =new Random();
-    int g =random.nextInt(10)+1;
+    int g =random.nextInt(100)+1;
     int min=1,max=100;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                     .setNeutralButton("OK",null)
                     .show();
         }
-        while (n>min&n<max&&n<g){
+        while (n>min&&n<max&&n<g){
             min= n;
            Toast.makeText(this,"大 一點",Toast.LENGTH_SHORT).show();
             TextView numbermin = findViewById(R.id.number_min);
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             numbermin.setText(Integer.toString(n));
             break;
         }
-        while (n>min&n<max&&n>g){
+        while (n>min&&n<max&&n>g){
             max= n;
             Toast.makeText(this,"小 一點",Toast.LENGTH_SHORT).show();
             TextView numbermax = findViewById(R.id.number_max);
